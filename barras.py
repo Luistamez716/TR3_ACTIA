@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Definimos los 10 tiempos que se van a comparar
-tiempos = [0.002, 3.319, 0.0, 0.0, 0.0977, 0.002, 0.001, 29.1322, 0.001, 3.299]
+tiempos = [0.000, 0.499, 0.000, 0.000, 0.016, 0.000, 0.000, 2.600, 0.000, 0.492]
 
 # Gráfica de barras
 fig, ax = plt.subplots()
