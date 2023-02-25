@@ -12,7 +12,7 @@ with open(carpeta_script + "/resultados.json") as arch_result:
     resultados = json.load(arch_result)
 
 # Grafica resultados
-instancias = tuple(x for x in resultados.keys())
+instancias = tuple(x for i, x in enumerate(resultados.keys()))
 algoritmos = tuple(x for x in resultados[next(iter(resultados))]["comparacion"])
 algoritmos_tiempos = defaultdict(list)
 
@@ -35,11 +35,12 @@ for attribute, measurement in algoritmos_tiempos.items():
     ax.bar_label(rects, padding=3)
     multiplier += 1
 
+plt.yscale('log')
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('tiempo (segundos)')
 ax.set_title('Tiempos de resolución algoritmos')
 ax.set_xticks(x + width, instancias)
 ax.legend(loc='upper left', ncols=3)
-ax.set_ylim(0, 60)
+ax.set_ylim(0, 1000)
 
 plt.show()
