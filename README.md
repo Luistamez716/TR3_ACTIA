@@ -8,6 +8,10 @@ Miembros
 * Luis Otoniel Tamez Alonso  
  1948774
 
+NOTA
+----
+Necesita tener matplotlib y numpy para que funcione el código
+
 Información
 -----------
 * El codigo de los algoritmos está en Algoritmos.py
